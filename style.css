@@ -1,0 +1,581 @@
+/*
+Theme Name: BDG
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ BDG is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+body.term-development,
+body.tax-project_type,
+body.tax-project_location,
+body.tax-project_category,
+body.single-projects,
+body.page-template-page-search-php {
+	background: url(images/noHeaderBg.jpg) repeat-x top center #deeff9;
+}
+
+body{background:#000;}
+
+/* Projects Nav */
+
+#projects-nav {
+	height: 35px;
+	margin: 140px 0 45px 0;
+	color: #FFF;
+	text-transform: uppercase;
+	font-size: 10px;
+}
+
+#projects-nav ul {
+	margin: 0; padding: 0;
+	list-style-type: none;
+}
+
+#projects-nav li {
+	display: block;
+	float: left;
+	line-height: 35px;
+	height: 35px;
+	margin: 0; padding: 0; /* only needed if you don't have a reset */
+	position: relative;
+	cursor: pointer;
+	width: 125px;
+}
+
+#projects-nav li a {
+	display: block;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 15px;
+	text-decoration: none;
+	color: #FFF;
+}
+
+#projects-nav li a:hover {
+	color: #214A77;
+}
+
+#projects-nav ul ul {
+	display: none;
+	position: absolute;
+	top: 35px;
+	z-index: 50;
+}
+
+#projects-nav ul ul li {
+	float: none;
+	min-width: 100px;
+	background: #52A2CD;
+}
+
+#projects-nav ul ul li a {
+	padding: 0 10px;
+}
+
+#projects-nav ul li:hover > ul {
+	display: block;
+}
+
+#projects-nav ul ul li ul {
+	left: 100px;
+	top: 0;
+}
+
+#projects-nav-main span {
+	margin-left: 10px;
+}
+
+.by-drop-arrow {
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.grid-or-list {
+	float: right;
+	padding-top: 10px;
+}
+
+.grid-or-list div {
+  	float: none;
+	cursor: pointer;
+	margin-right: 10px;
+	display: inline-block;
+	height: 41px;
+}
+
+.grid-or-list div.current {
+	background: url(images/grid-list-current.png) no-repeat center -10px;
+}
+
+#project-grid-view {
+}
+
+#project-grid-view .individual-project {
+	float:left;
+	width: 315px;
+	height: 200px;
+	margin: 0 5px 5px 0;
+	position: relative;
+	overflow: hidden;
+	outline: 1px solid #51A2CD;
+}
+
+#project-grid-view .address-overlay {
+	width: 195px;
+	height: 80px;
+	margin: 0;
+	padding: 60px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(56,151,203,0.7);
+	color: #FFF;
+	font-size: 20px;
+	display: none;
+	text-decoration: none;
+}
+
+#project-grid-view .view-box {
+	width: 60px;
+	height: 10px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: #BBD5E3;
+	color: #214A77;
+	text-transform: uppercase;
+	padding: 10px 0;
+	line-height: 10px;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#project-list-view {
+	display: none;
+}
+
+#project-list-view .individual-project {
+	display: block;
+	margin-bottom: 5px;
+	height: 20px;
+	background: #CCE2EE;
+	color: #214A77;
+	text-decoration: none;
+	padding: 10px;
+	position: relative;
+}
+
+#project-list-view .individual-project:hover {
+	color: #FFF;
+	background: #52a2cd;
+}
+
+#project-list-view .link-indicator {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 35px;
+	height: 40px;
+	background-image: url(images/link-indicator.png);
+	background-color: #bbd3e2;
+}
+
+#project-list-view .individual-project:hover .link-indicator {
+	background-image: url(images/link-indicator-hover.png);
+	background-color: #3976a2;
+}
+
+/* moved to justin.css to let mobile styling work...will move back when css is merged up
+.projects-search {
+	width: 100%;
+	background: #bbd3e2;
+	height: 100px;
+	text-transform: uppercase;
+	padding-top: 30px;
+}
+*/
+.projects-search h2 {
+	line-height: normal;
+	color: #254c78;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.search-form-wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.projects-search select {
+	width: 450px;
+	height: 30px;
+	background: #DEEFF9;
+	color: #52a2cd;
+	margin: 0;
+	text-transform: uppercase;
+	border:none;
+	outline:none;
+	display: inline-block;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	cursor:pointer;
+}
+
+.projects-search input[type="submit"] {
+	width: 45px;
+	height: 30px;
+	color: #FFF;
+	background: #52a2cd;
+	border: 0;
+}
+
+.projects-search label { position:relative }
+
+.projects-search label:after {
+    content:'<';
+    font:30px "Consolas", monospace;
+    color:#52a2cd;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+    right:10px; top:-8px;
+    position:absolute;
+    pointer-events:none;
+}
+
+.projects-search label:before {
+    content:'';
+    right:4px; top:-5px;
+    width:30px; height:30px;
+    background:#DEEFF9;
+    position:absolute;
+    pointer-events:none;
+    display:block;
+}
+
+/*** single project styles ***/
+
+#single-title {
+	height: 27px;
+	margin: 140px auto 0 auto;
+	color: #FFF;
+	font-size: 15px;
+	line-height: normal;
+	padding-top: 8px;
+	width: 960px;
+}
+
+.image-slider {
+	height: 500px;
+	width: 100%;
+	margin-bottom: 40px;
+	overflow: hidden;
+}
+
+.image-slider ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.anythingWindow {
+	overflow:visible !important;
+}
+
+.single-projects #anythingControls {
+	float: right;
+	height: 20px;
+}
+
+.single-projects #anythingControls ul {
+	margin: 0;
+}
+
+.single-projects #anythingControls ul li {
+	float: none;
+}
+
+.project-header {
+	margin-bottom: 5px;
+}
+
+.project-header h2 {
+	display: block;
+	height: 20px;
+	background: #CCE2EE;
+	color: #214A77;
+	padding: 10px;
+	position: relative;
+	cursor: pointer;
+	line-height: normal;
+}
+
+.project-header h2 .click-indicator {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 35px;
+	height: 40px;
+	background-color: #bbd3e2;
+}
+
+.project-header h2 .click-indicator.down {
+	background-image: url(images/click-indicator-down.png);
+}
+
+.project-header h2 .click-indicator.up {
+	background-image: url(images/click-indicator-up.png);
+}
+
+.project-header .project-info {
+	display: none;
+	padding: 20px 35px 20px 20px;
+}
+
+.amenities ul, .details ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.amenities ul li:before, .details ul li:before {
+	content: '+ \0000a0';
+}
+
+.tenant-list ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.tenant-list li {
+	width: 280px;
+	float: left;
+	margin: 0 20px 5px 0;
+}
+
+.availabilities table {
+	width: 100%;
+	background: #FFF;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+.availabilities .view-column {
+	width: 70px;
+}
+
+.availabilities tr {
+	height: 40px;
+}
+
+.availabilities th, .availabilities td {
+	border: 1px solid #DEEFF9;
+	color: #254c78;
+	vertical-align: middle;
+}
+
+.availabilities th {
+	background: #eff6fc;
+	text-transform: uppercase;
+}
+
+.availabilities a {
+	display: block;
+	width: 70px;
+	height: 40px;
+	margin: 0;
+	padding: 0;
+}
+
+.map-wrapper {
+	background: #FFF;
+	padding: 15px;
+}
+
+.map-wrapper iframe {
+	border: none;
+	margin-bottom: 15px;
+}
+
+.map-wrapper .map-links {
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+
+.map-wrapper .map-links a {
+	color: #6A88A0;
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	float: left;
+	padding: 10px 0 10px 20px;
+}
+
+.map-wrapper .map-links a:first-child {
+	border-right: 1px solid #6A88A0;
+	padding: 10px 20px 10px 0;
+}
+
+.map-wrapper .map-links a:hover {
+	color: #BBD3E2;
+}
+
+.contact .contact-info {
+	width: 410px;
+	height: 200px;
+	padding: 15px;
+	background: #eff6fc;
+	float: left;
+	margin-right: 10px;
+	line-height: normal;
+	color: #214A77;
+}
+
+.contact .contact-info.active {
+	background: #FFF;
+}
+
+.contact-photo {
+	float: left;
+	margin-right: 15px;
+}
+
+.contact-info h1 {
+	font-size: 20px;
+	margin: 35px 0 0 0;
+	clear: none;
+}
+
+.contact-info h1 a {
+	text-decoration: none;
+}
+
+.contact-info h2 {
+	margin: 0 0 25px 0;
+	clear: none;
+	display: inline;
+	padding: 0;
+	background: 0;
+	text-transform: none !important;
+	font-size: 13px !important;
+	cursor: default;
+}
+
+.contact-info p {
+	margin: 0;
+}
+
+.contact-info p a {
+	color: #52a2cd;
+}
+
+.contact-info p img {
+	margin-right: 5px;
+}
+
+.contact-info a {
+	text-decoration: none;
+	color: #214A77;
+}
+
+.press a {
+	display: block;
+	position: relative;
+	height: 30px;
+	margin-bottom: 1px;
+	background: #FFF;
+	color: #254c78;
+	text-decoration: none;
+	padding: 10px 10px 0 90px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.press .link-indicator{
+	background: url(images/press-avail-link.png);
+	width: 70px;
+	height: 40px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-right: 1px solid #DEEFF9;;
+}
+
+.press a .press-date {
+	color: #6e8ea7;
+}
+
+.details .sub-info {
+	width: 295px;
+	float: left;
+	margin: 0 5px 15px 0;
+}
+
+.details .sub-info.wide {
+	width: 595px;
+}
+
+.details .sub-info h3 {
+	text-transform: uppercase;
+	color: #708ca4 !important;
+	font-size: 18px !important;
+	margin: 0 0 15px 0;
+}
+
+.details .sub-info-content {
+	background: #FFF;
+	padding: 25px;
+	color: #6a6a6a;
+	font-size: 13px;
+}
+
+.project-footer {
+	height: 20px;
+	padding: 10px;
+	color: #deeff9;
+	background: #214A77;
+	text-transform: uppercase;
+}
+
+.project-share-buttons a {
+	margin-left: 10px;
+}
+
+.project-share-buttons, .plan-link, .flyer-link {
+	float: left;
+}
+
+.plan-link a, .flyer-link a {
+	display: block;
+	margin-left: 20px;
+	padding-left: 20px;
+	border-left: 1px solid #deeff9;
+	color: #deeff9;
+	text-decoration: none;
+}
